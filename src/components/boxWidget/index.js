@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const BoxWidget = styled.div`
   margin-top: 24px;

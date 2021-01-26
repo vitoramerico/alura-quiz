@@ -1,16 +1,17 @@
-import db from "../db.json";
-import BoxWidget from "../src/components/boxWidget";
-import Footer from "../src/components/footer";
-import GitHubCorner from "../src/components/gitHubCorner";
-import QuizBackground from "../src/components/quizBackground";
-import QuizLogo from "../src/components/quizLogo";
-import QuizContainer from "../src/components/quizContainer";
-import Header from "../src/components/header";
+import React from 'react';
+
+import db from '../db.json';
+import BoxWidget from '../src/components/boxWidget';
+import Footer from '../src/components/footer';
+import GitHubCorner from '../src/components/gitHubCorner';
+import QuizBackground from '../src/components/quizBackground';
+import QuizLogo from '../src/components/quizLogo';
+import QuizContainer from '../src/components/quizContainer';
+import Form from '../src/components/form';
 
 export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
-      <Header title={db.title} description={db.description} image={db.bg} />
       <QuizContainer>
         <QuizLogo />
         <BoxWidget>
@@ -18,7 +19,8 @@ export default function Home() {
             <h1>{db.title}</h1>
           </BoxWidget.Header>
           <BoxWidget.Content>
-            <p>{db.description}</p>
+            <p>Teste seus conhecimentos sobre o Homem Aranha</p>
+            <Form />
           </BoxWidget.Content>
         </BoxWidget>
         <BoxWidget>
