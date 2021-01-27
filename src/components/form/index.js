@@ -10,8 +10,6 @@ function enviaDados(event, name) {
   event.preventDefault();
 
   router.push(`/quiz?name=${name}`);
-
-  console.log('enviando os dados');
 }
 
 export default function Form() {
@@ -21,11 +19,13 @@ export default function Form() {
   return (
     <form onSubmit={(event) => enviaDados(event, name)}>
       <Input
-        onChange={(event) => setName(event.target.value)}
+        name="nomeDoUsuario"
         placeholder="Digite seu nome aqui"
+        value={name}
+        onChange={(event) => setName(event.target.value)}
       />
       <Button type="submit" disabled={name.length === 0}>
-        Jogar
+        {`Jogar ${name}`}
       </Button>
     </form>
   );
