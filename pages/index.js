@@ -19,7 +19,7 @@ export default function Home() {
             <h1>{db.title}</h1>
           </BoxWidget.Header>
           <BoxWidget.Content>
-            <p>Teste seus conhecimentos sobre o Homem Aranha</p>
+            <p>{db.description}</p>
             <Form />
           </BoxWidget.Content>
         </BoxWidget>

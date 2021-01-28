@@ -20,7 +20,7 @@ let db = _db;
 
 function getData() {
   fetch('https://imersao-react-next-js.matheusmuriel.vercel.app/api/db').then((respServer) => respServer.json()).then((respConvertida) => {
-    //console.log(respConvertida);
+    // console.log(respConvertida);
     db = respConvertida;
   });
 }
@@ -41,7 +41,7 @@ export default function QuizPage() {
   }
 
   React.useEffect(() => {
-    //getData();
+    // getData();
     setTimeout(() => {
       setScreenState(screenStates.QUIZ);
     }, 1 * 1000);
