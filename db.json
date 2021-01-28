@@ -1,43 +1,123 @@
 {
-    "bg": "https://images.unsplash.com/photo-1505925456693-124134d66749?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1500&q=80",
-    "title": "Quiz do Homem Aranha",
-    "description": "Teste os seus conhecimentos sobre o Homem Aranha",
-    "questions": [
-      {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
-        "description": "Essa é pra aquecer",
-        "answer": 2,
-        "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
-        ]
-      },
-      {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
-        "answer": 0,
-        "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
-        ]
-      }
-    ],
-    "external": [
-      ""
-    ],
-    "theme": {
-      "colors": {
-        "primary": "#00695f",
-        "secondary": "#3d5afe",
-        "mainBg": "#171B35",
-        "contrastText": "#FFFFFF",
-        "wrong": "#f44336",
-        "success": "#4caf50"
-      },
-      "borderRadius": "4px"
+  "bg": "https://lilacinfotech.com/lilac_assets/images/blog/Why-Google-Flutter.jpg",
+  "title": "Quiz sobre Flutter",
+  "description": "Teste os seus conhecimentos sobre Flutter",
+  "questions": [
+    {
+      "image": "https://flutter.dev/images/flutter-logo-sharing.png",
+      "title": "O que é Flutter?",
+      "description": "Essa é pra aquecer",
+      "answer": 1,
+      "alternatives": [
+        "Uma linguagem de programacão",
+        "Um framework"
+      ]
+    },
+    {
+      "image": "https://auditeste.com.br/wp-content/uploads/2020/02/linguagens_2020.jpg",
+      "title": "Qual a linguagem de programação ele utiliza?",
+      "description": "",
+      "answer": 3,
+      "alternatives": [
+        "JavaScript",
+        "Go",
+        "Java",
+        "Dart",
+        "C#"
+      ]
+    },
+    {
+      "image": "https://topofstacksoftware.com/wp-content/uploads/2017/12/applewindowsgoogle.png",
+      "title": "Qual das empresas abaixo foi responsável pelo seu desenvolvimento?",
+      "description": "Foi a empresa",
+      "answer": 1,
+      "alternatives": [
+        "Microsoft",
+        "Google",
+        "Apple"
+      ]
+    },
+    {
+      "image": "https://www.frozenmountain.com/hubfs/4%20-%20blog%20images/Open%20source%20vs%20commercial%20SDK.png",
+      "title": "Ele é open source?",
+      "description": "",
+      "answer": 0,
+      "alternatives": [
+        "Sim",
+        "Não"
+      ]
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMJ88ELVlzi4MyCJC4b5fFjtfUfypfiJli0w&usqp=CAU",
+      "title": "Qual das plataformas abaixo ele roda?",
+      "description": "Ele foi projetado para rodar em",
+      "answer": 3,
+      "alternatives": [
+        "Dispositivos móveis",
+        "Web",
+        "Desktop",
+        "Todas as opcões"
+      ]
+    },
+    {
+      "image": "https://blog.vxcomunicacao.com.br/wp-content/uploads/2018/08/04_calendario-datas-comemorativas.png",
+      "title": "Quando ele foi lançado?",
+      "description": "Qual foi a data de lançamento da versao 1.0",
+      "answer": 1,
+      "alternatives": [
+        "6 de janeiro de 2015",
+        "4 de dezembro de 2018",
+        "11 de dezembro de 2019"
+      ]
+    },
+    {
+      "image": "https://cdn.dribbble.com/users/22691/screenshots/2170347/gif_for_the_sport_app_dribbble_800x600.gif",
+      "title": "Sobre suas animações",
+      "description": "Ele foi projetado para rodar animações em",
+      "answer": 0,
+      "alternatives": [
+        "60fps",
+        "70fps",
+        "120fps"
+      ]
+    },
+    {
+      "image": "https://images.prismic.io/ionicframeworkcom/7cb83b74-6c78-4295-9f71-d45f2399cfda_comparing-cross-platform-frameworks-article.png?auto=compress,format&rect=0,0,1440,800&w=1440&h=800",
+      "title": "Qual seu concorrente?",
+      "description": "Me diz ai qual é seu principal concorrente",
+      "answer": 0,
+      "alternatives": [
+        "React",
+        "Xamarin",
+        "Phone Gap",
+        "ionic"
+      ]
+    },
+    {
+      "image": "https://dashbouquet.com/static/020b2d58fcc9ac999513a862aa01314c/d47f1/flutter-app-development-post.jpg",
+      "title": "Quais seus diferenciais?",
+      "description": "",
+      "answer": 3,
+      "alternatives": [
+        "Desempenho nativo",
+        "Desenvolvimento rápido",
+        "UI expressiva e flexível",
+        "Todas as alternativas"
+      ]
     }
+  ],
+  "external": [
+    ""
+  ],
+  "theme": {
+    "colors": {
+      "primary": "#00695f",
+      "secondary": "#3d5afe",
+      "mainBg": "#171B35",
+      "contrastText": "#FFFFFF",
+      "wrong": "#f44336",
+      "success": "#4caf50"
+    },
+    "borderRadius": "4px"
   }
+}
