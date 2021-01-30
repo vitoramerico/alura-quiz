@@ -33,7 +33,7 @@ const { theme } = db;
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Header title={db.title} description={db.description} image={db.logo} />
+      <Header title={db.title} description={db.description} image={db.bg} />
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Component {...pageProps} />
