@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { useRouter } from 'next/router';
 
@@ -12,7 +13,7 @@ function enviaDados(event, name) {
   router.push(`/quiz?name=${name}`);
 }
 
-export default function Form() {
+export default function Form({ onChangeName }) {
   router = useRouter();
   const [name, setName] = React.useState('');
 
@@ -22,7 +23,10 @@ export default function Form() {
         name="nomeDoUsuario"
         placeholder="Digite seu nome aqui"
         value={name}
-        onChange={(event) => setName(event.target.value)}
+        onChange={(event) => {
+          setName(event.target.value);
+          onChangeName(event.target.value);
+        }}
       />
       <Button type="submit" disabled={name.length === 0}>
         {`Jogar ${name}`}

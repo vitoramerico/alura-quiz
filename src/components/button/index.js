@@ -1,7 +1,9 @@
+import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
 
-const Button = styled.button`
+const MyButton = styled.button`
   background-color: ${({ theme }) => theme.colors.secondary};
   color: ${({ theme }) => theme.colors.contrastText};
   border-radius: ${({ theme }) => theme.borderRadius};
@@ -28,9 +30,17 @@ const Button = styled.button`
   }
 `;
 
-Button.propTypes = {
+MyButton.propTypes = {
   type: PropTypes.oneOf(['submit', 'type', 'button']).isRequired,
   children: PropTypes.node.isRequired,
 };
 
-export default Button;
+export default function Button({ ...props }) {
+  return (
+    <motion.div whileTap={{ scale: 0.8 }}>
+      <MyButton {...props}>
+        Confirmar
+      </MyButton>
+    </motion.div>
+  );
+};

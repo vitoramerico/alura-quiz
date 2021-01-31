@@ -65,6 +65,13 @@ BoxWidget.Topic = styled.a`
   &:focus {
     opacity: .5;
   }
+
+  #__isDisabled {
+    color: currentColor;
+    cursor: not-allowed;
+    opacity: 0.5;
+    text-decoration: none;
+  }
 `;
 
 export default BoxWidget;

@@ -1,9 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { motion } from 'framer-motion';
 
 import BoxWidget from '../boxWidget';
 import Button from '../button';
 import FormAlternatives from '../form_alternatives';
+import BackLink from '../backLink';
+import ResultadoResposta from '../resultadoResposta';
 
 export default function QuestionWidget({
   question, questionsSize, questionIndex, onSubmit, addResult,
@@ -17,6 +20,7 @@ export default function QuestionWidget({
   return (
     <BoxWidget>
       <BoxWidget.Header>
+        <BackLink href="/" />
         <h3>
           {`Pergunta ${questionIndex + 1} de ${questionsSize}`}
         </h3>
@@ -50,36 +54,40 @@ export default function QuestionWidget({
           }, 3 * 1000);
         }}
         >
+          {isQuestionsSubmited && <ResultadoResposta isCorrect={isCorrect} />}
+
           {question.alternatives.map((v, index) => {
             const alternativeId = `qst__${questionIndex}_alt__${index}`;
             const alternativeStatus = isCorrect ? 'SUCESS' : 'ERROR';
             const isSelected = selectedAlternative === index;
             return (
-              <BoxWidget.Topic
-                as="label"
-                key={alternativeId}
-                htmlfor={alternativeId}
-                data-selected={isSelected}
-                data-status={isQuestionsSubmited && alternativeStatus}
-              >
-                <input
-                  id={alternativeId}
-                  name={questionId}
-                  type="radio"
-                  style={{ display: 'none' }}
-                  onChange={() => setSelectedAlternative(index)}
-                />
-                {v}
-              </BoxWidget.Topic>
+              <motion.div whileTap={{ scale: 0.8 }}>
+                <BoxWidget.Topic
+                  as="label"
+                  key={alternativeId}
+                  htmlfor={alternativeId}
+                  data-selected={isSelected}
+                  data-status={isQuestionsSubmited && alternativeStatus}
+                >
+                  <input
+                    id={alternativeId}
+                    name={questionId}
+                    type="radio"
+                    style={{ display: 'none' }}
+                    onChange={() => setSelectedAlternative(index)}
+                  />
+                  {v}
+                </BoxWidget.Topic>
+              </motion.div>
             );
           })}
 
-          <Button type="submit" disabled={!hasAlternativeSelected}>
+          <Button
+            type="submit"
+            disabled={!hasAlternativeSelected}
+          >
             Confirmar
           </Button>
-          {/* <p>{`Alternativa selecionada: ${selectedAlternative}`}</p> */}
-          {isQuestionsSubmited && isCorrect && <p>Voce acertou</p>}
-          {isQuestionsSubmited && !isCorrect && <p>Voce errou</p>}
         </FormAlternatives>
         {/* <pre>
             {JSON.stringify(question, null, 4)}
